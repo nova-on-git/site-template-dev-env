@@ -4,6 +4,7 @@ WORKDIR /app
 
 # Install git and pnpm
 RUN apt-get update && \
+    apt-get install -y tmux && \
     apt-get install -y git && \
     npm install -g pnpm@9.11.0 nuxt && \
     apt-get clean && \
@@ -28,9 +29,11 @@ WORKDIR /app/veloris-dashboard
 RUN git pull
 RUN pnpm install
 
+
 WORKDIR /app/veloris-site-template
 RUN git pull
 RUN pnpm install
+
 
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh
