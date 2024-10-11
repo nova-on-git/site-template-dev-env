@@ -1,0 +1,24 @@
+{
+
+	"name": "Veloris CMS Dev Workspace",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": ""
+	},
+	
+	"runArgs": ["--interactive", "--tty"],
+	// "postCreateCommand": "/usr/local/bin/startup.sh",
+	"postStartCommand": "/usr/local/bin/startup.sh",
+	"remoteUser": "root",
+	"forwardPorts": [3000],
+	"workspaceFolder": "/app",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"formulahendry.auto-rename-tag"
+			]
+		}
+	}
+
+}
+
