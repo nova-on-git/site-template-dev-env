@@ -35,6 +35,5 @@ RUN pnpm install
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh
 
-
 USER root
 EXPOSE 3000
