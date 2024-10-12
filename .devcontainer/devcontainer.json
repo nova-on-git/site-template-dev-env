@@ -7,8 +7,8 @@
 	},
 	
 	"runArgs": ["--interactive", "--tty"],
-	// "postCreateCommand": "/usr/local/bin/startup.sh",
-	"postStartCommand": "/usr/local/bin/startup.sh",
+	// "postStartCommand": "/usr/local/bin/startup.sh",
+	"postAttachCommand": "/usr/local/bin/startup.sh",
 	"remoteUser": "root",
 	"forwardPorts": [3000],
 	"workspaceFolder": "/app",
