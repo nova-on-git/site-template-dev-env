@@ -15,22 +15,17 @@ RUN apt-get update && \
 # Set NODE_ENV to development
 ENV NODE_ENV=development
 
-# Clone veloris-dashboard
-RUN git clone https://codywakeford:${GITHUB_TOKEN}@github.com/Veloris-Designs/veloris-dashboard.git ./veloris-dashboard
+# Clone dashboard
+RUN git clone https://codywakeford:${GITHUB_TOKEN}@github.com/nova-on-git/nova-dashboard.git ./dashboard
 
+# Clone site-template
+RUN git clone https://codywakeford:${GITHUB_TOKEN}@github.com/nova-on-git/nova.tf.git ./site
 
-# Clone veloris-site-template
-RUN git clone https://codywakeford:${GITHUB_TOKEN}@github.com/Veloris-Designs/veloris-site-template.git ./veloris-site-template
-
-# Clone nova
-RUN git clone https://codywakeford:${GITHUB_TOKEN}@github.com/Veloris-Designs/nova.git ./nova
-
-WORKDIR /app/veloris-dashboard
+WORKDIR /app/dashboard
 RUN git pull
 RUN pnpm install
 
-
-WORKDIR /app/veloris-site-template
+WORKDIR /app/template
 RUN git pull
 RUN pnpm install
 

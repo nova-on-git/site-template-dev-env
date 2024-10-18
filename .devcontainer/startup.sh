@@ -3,7 +3,7 @@
 echo ""
 echo -e "\e[32m[Veloris] Installing dependencies and spinning up a dev server... \e[0m"
 
-cd /app/veloris-dashboard
+cd /app/dashboard
 
 echo ""
 echo ""
@@ -20,7 +20,7 @@ echo ""
 echo -e "\e[32m[Veloris] Building veloris-dashboard for .nuxt cache. \e[0m"
 nuxt build
 
-cd /app/veloris-site-template
+cd /app/site
 
 echo ""
 echo ""
